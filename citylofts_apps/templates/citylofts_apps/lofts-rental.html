@@ -1,0 +1,132 @@
+<!-- -->
+<head>
+    <title>Loft Rentals Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 320px; /* Adjust this value as needed */
+            margin: 0 auto; /* Center the container on the page */
+            border: 2px solid #ccc; /* Add a border to create the rectangular box */
+            padding: 20px; /* Add some padding to create space between the border and content */
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .input-group {
+        display: flex;
+        align-items: center;
+        }
+
+        .input-group label {
+        margin-right: 10px;
+        }
+
+    /* Add this CSS for aligning the labels */
+        .form-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        }
+    </style>
+</head>
+<body>
+    
+     <!-- lofts-rental.html -->
+
+<!-- ... Your existing code ... -->
+
+<body>
+<div class="container">    
+    <h1>Loft Rentals Form</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <div class="input-group">
+                <label for="rent_value_euro">Rent Value:</label>
+                <span>$</span>
+                <input type="text" name="rent_value_euro" required>
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="present_status">Present Status:</label>
+            <select name="present_status" required>
+                <option value="occupied">Occupied</option>
+                <option value="free">Free</option>
+            </select>
+        </div>
+        <br>
+        <div class="form-group">
+            <div class="input-group">
+                <label for="rental_period_from">Rental Period From:</label>
+                <input type="date" name="rental_period_from">
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <div class="input-group">
+                <label for="rental_period_to">Rental Period To:</label>
+                <input type="date" name="rental_period_to">
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="loft_number">Loft Number:</label>
+            <input type="text" name="loft_number" required>
+        </div>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="Smart-Contract" class="grid-item"><strong>Smart Contract</strong> </a>
+</div>
+</body>
+
+  

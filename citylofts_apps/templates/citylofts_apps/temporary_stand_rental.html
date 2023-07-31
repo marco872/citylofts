@@ -1,0 +1,132 @@
+
+<head>
+    <title>Temporary Stand Rentals Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 320px; /* Adjust this value as needed */
+            margin: 0 auto; /* Center the container on the page */
+            border: 2px solid #ccc; /* Add a border to create the rectangular box */
+            padding: 20px; /* Add some padding to create space between the border and content */
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .input-group {
+        display: flex;
+        align-items: center;
+        }
+
+        .input-group label {
+        margin-right: 10px;
+        }
+
+    /* Add this CSS for aligning the labels */
+        .form-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        }
+    </style>
+</head>
+
+    
+     <!-- lofts-rental.html -->
+
+<!-- ... Your existing code ... -->
+
+<body>
+<div class="container"> 
+
+<body>
+    <h1>Temporary Stand Rentals Form</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="rent_day_value_yi">Rent Value in Euro for Yi Number:</label>
+        <input type="text" name="rent_day_value_yi" required>
+        <br>
+        <label for="present_status_yi">Present Status for Yi Number:</label>
+        <select name="present_status_yi" required>
+            <option value="occupied">Occupied</option>
+            <option value="free">Free</option>
+        </select>
+        <br>
+        <label for="rental_period_from_yi">Rental Period From for Yi Number:</label>
+        <input type="date" name="rental_period_from_yi">
+        <br>
+        <br>
+        <label for="rental_period_to_yi">Rental Period To for Yi Number:</label>
+        <input type="date" name="rental_period_to_yi">
+        <br>
+        <br>
+        <label for="rent_day_value_yang">Rent Value in Euro for Yang Number:</label>
+        <input type="text" name="rent_day_value_yang" required>
+        <br>
+        <label for="present_status_yang">Present Status for Yang Number:</label>
+        <select name="present_status_yang" required>
+            <option value="occupied">Occupied</option>
+            <option value="free">Free</option>
+        </select>
+        <br>
+        <label for="rental_period_from_yang">Rental Period From for Yang Number:</label>
+        <input type="date" name="rental_period_from_yang">
+        <br>
+        <br>
+        <label for="rental_period_to_yang">Rental Period To for Yang Number:</label>
+        <input type="date" name="rental_period_to_yang">
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="Smart-Contract" class="grid-item"><strong>Smart Contract</strong> </a>
+</div>
+</body>
+
